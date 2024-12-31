@@ -32,7 +32,7 @@ const OutPut = ({editorRef,selectedLanguage}) => {
         <span className='text-white'>{loading? " loading..." : ""}</span>
         <div className={`h-[82vh] rounded-sm p-2 border overflow-scroll overflow-x-hidden ${isError ? "border-red-500 text-red-500" : "border-gray-600 text-white"} `}>
             {output ? output.map(
-                (line, index) => <p key={index}>{line}</p>
+                (line, index) => <p className='break-words' key={index}>{line}</p>
             ) : "Click 'Run code' to see the output." }
         </div>
     </div>
