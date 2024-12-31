@@ -30,7 +30,7 @@ const OutPut = ({editorRef,selectedLanguage}) => {
         <h2 className='mb-1'>Output</h2>
         <Button variant="outline" className="mb-1 bg-black text-white" onClick={runCode}>Run code</Button>
         <span className='text-white'>{loading? " loading..." : ""}</span>
-        <div className={`h-[82vh] rounded-sm p-2 border ${isError ? "border-red-500 text-red-500" : "border-gray-600 text-white"} `}>
+        <div className={`h-[82vh] rounded-sm p-2 border overflow-scroll overflow-x-hidden ${isError ? "border-red-500 text-red-500" : "border-gray-600 text-white"} `}>
             {output ? output.map(
                 (line, index) => <p key={index}>{line}</p>
             ) : "Click 'Run code' to see the output." }
